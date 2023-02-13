@@ -87,7 +87,7 @@ Repository for class TC2008B
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: pKYZ, A01652071_TC2008B, `twitter_handle`, `linkedin_username`, `email_client`, A01652071@tec.mx, Class TC2008B 2023, Space fro uploading homeworks and projects
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
