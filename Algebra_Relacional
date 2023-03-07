@@ -1,1 +1,23 @@
+Ejercicios:
 
+σ Nacionalidad='mexicana' (PARTICIPANTE)
+
+
+JOIN de PARTICIPANTE y PUNTOSACUMULADOS, seguido por σ Nacionalidad='USA' (PARTICIPANTE⋈ PARTICIPANTE.Número=PUNTOSACUMULADOS.Número) ⋈ σ Nacionalidad='USA' (PARTICIPANTE)
+
+PARTICIPANTE ⋈ (π NombreCompetencia, Número, Lugar (CLASIFICACION)) ⋈ σ Lugar=1 (π Número, Apellidos, Nombre (PARTICIPANTE) ⋈ π NombreCompetencia (CLASIFICACION))
+
+
+π NombreCompetencia (COMPETENCIA ⋈ (π NombreCompetencia (CLASIFICACION ⋈ (σ Nacionalidad='mexicana' (PARTICIPANTE) ⋈ PARTICIPANTE.Número=CLASIFICACION.Número))))
+
+
+PARTICIPANTE - (π Número (π Número, Lugar (CLASIFICACION) ⋈ σ Lugar=1 (π Número, Lugar (CLASIFICACION))))
+
+
+PARTICIPANTE ÷ (π Número (π Número, NombreCompetencia, Lugar (CLASIFICACION))) = π Número (PARTICIPANTE)
+
+
+σ NumPtos=max(NumPtos)(COMPETENCIA)
+
+
+π Nacionalidad (PARTICIPANTE) ÷ π Nacionalidad (σ COUNT(DISTINCT NombreCompetencia)=(SELECT COUNT(*) FROM COMPETENCIA) (PARTICIPANTE × COMPETENCIA))
